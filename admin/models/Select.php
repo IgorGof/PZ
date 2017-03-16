@@ -16,20 +16,8 @@
         }
         
         function GetAllData(){
-            $query = "SELECT * FROM $this->tabname";
-            mysql_query("SET NAMES utf8");
-            if ($sql = mysql_query($query)){
-                $data = mysql_fetch_array($sql);
-            }
-            return $data;
-        }
-        
-        function Get13Data() {
-            $query = "SELECT * FROM $this->tabname order by ID desc limit 13";
-            mysql_query("SET NAMES utf8");
-            if ($sql = mysql_query($query)){
-            }
-            return $sql;
+            
         }
     }
+
 ?>
