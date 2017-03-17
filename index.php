@@ -4,22 +4,27 @@
         <meta charset="utf-8"/>
         <title>Предварительная запись</title>
         <link rel="stylesheet" href="css/my.css"/>
+ <!--       <link href="admin/css/bootstrap.css" rel="stylesheet"> -->
     </head>
     <body>
         <div class = "Zagolovok">
             <span>Журнал предварительной записи</span>
         </div>
-        <div class = "table">
-            <table>
+        <div>
+            <table class="table_blur">
+                <thead>
                 <tr>
                     <th>№<br />п/п</th>
-                    <th>ФИО<br />(к кому)</th>
-                    <th>День<br />(в какой день недели)</th>
-                    <th>Время<br />(в какое время)</th>
-                    <th>Цель<br />(Цель посещения)</th>
-                    <th>ФИО<br />(ФИО посетителя)</th>
-                    <th>ФИО<br />(запись внес)</th>
+                    <th>ФИО специалиста</th>
+                    <th>Дата</th>
+                    <th>День недели</th>
+                    <th>Назначенное время</th>
+                    <th>Цель посещения</th>
+                    <th>ФИО посетителя</th>
+                    <th>ФИО регистратора</th>
                 </tr>
+                </thead>
+                <tbody>
                     <?php
                         include "admin/models/Database.php";
                         include "admin/models/Select.php";
@@ -32,6 +37,8 @@
                             echo '<tr>';
                             echo '<td>' . $nom . '</td>';
                             echo '<td>' . $myrow['kKomu'] . '</td>';
+                            $dateX = strtotime($myrow['Data']);
+                            echo '<td>' . date("d-m-Y", $dateX) . '</td>';
                             echo '<td>' . $myrow['Den'] . '</td>';
                             echo '<td>' . $myrow['Vrem'] . '</td>';
                             echo '<td>' . $myrow['Cel'] . '</td>';
@@ -42,7 +49,7 @@
                             if ($i >= 13) {break;};
                         }
                     ?>
-
+                </tbody>
             </table>
         </div>
     </body>
