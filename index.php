@@ -34,7 +34,6 @@
                         
                         $nom = 1;
                         while ($row = mysql_fetch_array($data, MYSQL_ASSOC)) {
-                            printf ("ID: %s  Name: %s", $row["id"], $row["name"]);
                             echo '<tr>';
                             echo '<td>' . $nom . '</td>';
                             echo '<td>' . $row['kKomu'] . '</td>';
@@ -49,26 +48,12 @@
                             $nom = $nom + 1;
                             if ($i >= 13) {break;};
                         
-                        }   
-                        /* for ($i = 1; $i <= $rows; $i++) {
-                            $myrow = $object->getRecordById($i);
-                            echo '<tr>';
-                            echo '<td>' . $nom . '</td>';
-                            echo '<td>' . $myrow['kKomu'] . '</td>';
-                            $dateX = strtotime($myrow['Data']);
-                            echo '<td>' . date("d-m-Y", $dateX) . '</td>';
-                            echo '<td>' . $myrow['Den'] . '</td>';
-                            echo '<td>' . $myrow['Vrem'] . '</td>';
-                            echo '<td>' . $myrow['Cel'] . '</td>';
-                            echo '<td>' . $myrow['Poset'] . '</td>';
-                            echo '<td>' . $myrow['VnesZap'] . '</td>';
-                            echo '</tr>';
-                            $nom = $nom + 1;
-                            if ($i >= 13) {break;};
-                        }*/
+                        } 
                     ?>
                 </tbody>
             </table>
         </div>
+        <p></p>
+        <div class="But">Добавить</div>
     </body>
 </html>
