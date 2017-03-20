@@ -31,8 +31,26 @@
                         $object = new Select("znp");
                         $data = $object->Get13Data();
                         $rows = mysql_num_rows($data);
+                        
                         $nom = 1;
-                        for ($i = 1; $i <= $rows; $i++) {
+                        while ($row = mysql_fetch_array($data, MYSQL_ASSOC)) {
+                            printf ("ID: %s  Name: %s", $row["id"], $row["name"]);
+                            echo '<tr>';
+                            echo '<td>' . $nom . '</td>';
+                            echo '<td>' . $row['kKomu'] . '</td>';
+                            $dateX = strtotime($row['Data']);
+                            echo '<td>' . date("d-m-Y", $dateX) . '</td>';
+                            echo '<td>' . $row['Den'] . '</td>';
+                            echo '<td>' . $row['Vrem'] . '</td>';
+                            echo '<td>' . $row['Cel'] . '</td>';
+                            echo '<td>' . $row['Poset'] . '</td>';
+                            echo '<td>' . $row['VnesZap'] . '</td>';
+                            echo '</tr>';
+                            $nom = $nom + 1;
+                            if ($i >= 13) {break;};
+                        
+                        }   
+                        /* for ($i = 1; $i <= $rows; $i++) {
                             $myrow = $object->getRecordById($i);
                             echo '<tr>';
                             echo '<td>' . $nom . '</td>';
@@ -47,7 +65,7 @@
                             echo '</tr>';
                             $nom = $nom + 1;
                             if ($i >= 13) {break;};
-                        }
+                        }*/
                     ?>
                 </tbody>
             </table>
