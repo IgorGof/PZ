@@ -54,6 +54,6 @@
             </table>
         </div>
         <p></p>
-        <div class="But">Добавить</div>
+        <a href="AddZapis.php"><div class="But">Добавить</div></a>
     </body>
 </html>
