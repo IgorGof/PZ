@@ -84,3 +84,10 @@ form select {
     font-size: 16px;
     padding: 5px;  
 }
+form .date {
+    font-size: 16px;  
+}
+form input {
+    font-size: 16px;
+    padding: 5px;
+}
