@@ -48,7 +48,8 @@
                             $nom = $nom + 1;
                             if ($i >= 13) {break;};
                         
-                        } 
+                        }
+                        $object->closeConnection(); 
                     ?>
                 </tbody>
             </table>
