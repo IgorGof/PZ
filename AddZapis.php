@@ -33,18 +33,18 @@
                     ?>
                 </select>
                 <select name="mes">
-                    <option value="Январь">Январь</option>
-                    <option value="Февраль">Февраль</option>
-                    <option value="Март">Март</option>
-                    <option value="Апрель">Апрель</option>
-                    <option value="Май">Май</option>
-                    <option value="Июнь">Июнь</option>
-                    <option value="Июль">Июль</option>
-                    <option value="Август">Август</option>
-                    <option value="Сентябрь">Сентябрь</option>
-                    <option value="Октябрь">Октябрь</option>
-                    <option value="Ноябрь">Ноябрь</option>
-                    <option value="Декабрь">Декабрь</option>
+                    <option value="01">Январь</option>
+                    <option value="02">Февраль</option>
+                    <option value="03">Март</option>
+                    <option value="04">Апрель</option>
+                    <option value="05">Май</option>
+                    <option value="06">Июнь</option>
+                    <option value="07">Июль</option>
+                    <option value="08">Август</option>
+                    <option value="09">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
                 </select>
                 <select name="god">
                     <option value="2017">2017</option>
