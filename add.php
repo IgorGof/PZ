@@ -20,8 +20,8 @@
             print($data);
             echo "<br />";
             $query = "INSERT INTO 'znp' ('kKomu', 'Data', 'Den', 'Vrem', 'Cel', 'Poset', 'VnesZap') ".
-            "VALUE ('". $_POST[hero]. "', '". $data. "', '". $_POST[denn]. "', '". $_POST[Vrem]. "', '". $_POST[Cel].
-            "', '". $_POST[Posset]. "', '". $_POST[VnesZap]. "')";
+            "VALUE ('". $_POST[hero]. "', '". $data. "', '". $_POST[denn]. "', '". $_POST[vrem]. "', '". $_POST[cel].
+            "', '". $_POST[poset]. "', '". $_POST[vneszap]. "')";
             print($query);
             $object->closeConnection();
         ?>

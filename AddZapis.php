@@ -28,7 +28,12 @@
                 <select name="den">
                     <?php 
                         for ($i = 1; $i <= 31; $i++ ) {
-                            echo '<option value="'. $i . '">' . $i . '</option>';
+                            if ($i<10){
+                                echo '<option value="0'. $i . '">0' . $i . '</option>';
+                            }
+                            else {
+                                echo '<option value="'. $i . '">' . $i . '</option>';
+                            };
                         }
                     ?>
                 </select>
@@ -111,10 +116,10 @@
                 </select>
                 <p></p>
                 <label>Введите ФИО посетителя</label>
-                <input type="text" />
+                <input type="text" name="poset"/>
                 <p></p>
                 <label>Выберите ФИО внесшего запись</label>
-                <select name="hero1">
+                <select name="vneszap">
                     <option value="Куцурова Людмила Васильевна">Куцурова Людмила Васильевна</option>
                     <option value="Маськина Лилия Александровна">Маськина Лилия Александровна</option>
                     <option value="Гринева Елена Юрьевна">Гринева Елена Юрьевна</option>
