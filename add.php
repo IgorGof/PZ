@@ -14,16 +14,17 @@
             $object = new Select("znp");
             $object->connectToDb();
             mysql_query("SET NAMES utf8");
-            $sutki = 60 * 60 * 24;
             $data = $_POST[god] . "-" . $_POST[mes] ."-" .$_POST[den];
             echo "<br />";
             print($data);
             echo "<br />";
-            $query = "INSERT INTO 'znp' ('kKomu', 'Data', 'Den', 'Vrem', 'Cel', 'Poset', 'VnesZap') ".
+            $query = "INSERT INTO znp (kKomu, Data, Den, Vrem, Cel, Poset, VnesZap, Sostoyan) ".
             "VALUE ('". $_POST[hero]. "', '". $data. "', '". $_POST[denn]. "', '". $_POST[vrem]. "', '". $_POST[cel].
-            "', '". $_POST[poset]. "', '". $_POST[vneszap]. "')";
+            "', '". $_POST[poset]. "', '". $_POST[vneszap]. "', 1)";
             print($query);
+            mysql_query($query);
             $object->closeConnection();
+            header('Refresh: 2; URL=index.php');
         ?>
     </body>
  </html>
