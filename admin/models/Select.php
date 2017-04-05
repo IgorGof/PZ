@@ -26,7 +26,7 @@
         
         function Get13Data() {
             $query = "SELECT id, kKomu, Data, Den, Vrem, Cel, Poset, VnesZap, Sostoyan
-            FROM $this->tabname WHERE Sostoyan = '1' ORDER BY id desc limit 13";
+            FROM $this->tabname WHERE Sostoyan = '1' ORDER BY Data desc limit 13";
             mysql_query("SET NAMES utf8");
             if ($sql = mysql_query($query)){
             }

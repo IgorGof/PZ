@@ -24,7 +24,7 @@
             print($query);
             mysql_query($query);
             $object->closeConnection();
-            header('Refresh: 2; URL=index.php');
+            header('Refresh: 1; URL=index.php');
         ?>
     </body>
  </html>
