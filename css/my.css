@@ -64,13 +64,13 @@ div.Zagolovok {
 }
 .But {
     display: inline;
-    margin: 50px 50px 50px 50px;
+    margin: 50px 10px 50px 50px;
     width: 200px;
     text-align: center;
     font-size: 20px;
     background-color: #5a567f;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 40px;
     border: 2px solid #444444;
     border-radius: 15px;   
 }
