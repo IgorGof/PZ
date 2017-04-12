@@ -54,7 +54,7 @@
                 </tbody>
             </table>
         </div>
-        <p></p>
+        <br />
         <a href="AddZapis.php"><div class="But">Добавить</div></a>
         <a href="DelZapis.php"><div class="But">Удалить</div></a>
     </body>

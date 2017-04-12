@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class = "Zagolovok">
-            <span>Журнал предварительной записи</span>
+            <span>Удаление записи</span>
         </div>
         <div>
             <table class="table_blur">
@@ -33,9 +33,11 @@
                         $rows = mysql_num_rows($data);
                         
                         $nom = 1;
+                        echo '<form action="del.php" method="post">';
                         while ($row = mysql_fetch_array($data, MYSQL_ASSOC)) {
                             echo '<tr>';
-                            echo '<td align="center"><img src="img/delete.jpg" alt="Удалить"></td>';
+                            echo '<td align="center">
+                                    <input type="radio" name="vib" width="100px" value="' . $nom .'"/></td>';
                             echo '<td>' . $row['kKomu'] . '</td>';
                             $dateX = strtotime($row['Data']);
                             echo '<td>' . date("d-m-Y", $dateX) . '</td>';
@@ -54,6 +56,10 @@
                 </tbody>
             </table>
         </div>
-        <p>Нажмите на крестик с лева от записи которую необходимо удалить</p>
+        <input type="submit" name="send-param" value="Удалить" class="But"/>
+        </form>
+        <p>Выберите нужную запись и нажмите кнопку удалить</p>
+
+
     </body>
 </html>
