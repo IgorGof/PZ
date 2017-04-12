@@ -37,7 +37,7 @@
                         while ($row = mysql_fetch_array($data, MYSQL_ASSOC)) {
                             echo '<tr>';
                             echo '<td align="center">
-                                    <input type="radio" name="vib" width="100px" value="' . $nom .'"/></td>';
+                                    <input type="radio" name="vib" width="100px" value="' . $row[id] .'"/></td>';
                             echo '<td>' . $row['kKomu'] . '</td>';
                             $dateX = strtotime($row['Data']);
                             echo '<td>' . date("d-m-Y", $dateX) . '</td>';
